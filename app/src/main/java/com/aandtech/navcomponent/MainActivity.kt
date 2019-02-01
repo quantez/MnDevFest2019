@@ -1,9 +1,11 @@
 package com.aandtech.navcomponent
 
 import android.os.Bundle
-import android.support.design.widget.BottomNavigationView
-import android.support.v7.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.Navigation.findNavController
 import kotlinx.android.synthetic.main.activity_main.*
+import androidx.navigation.ui.NavigationUI.setupWithNavController
 
 class MainActivity : AppCompatActivity() {
 
