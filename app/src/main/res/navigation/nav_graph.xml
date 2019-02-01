@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_to_notificationFragment"
             app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_capturedTimeFragment"
+            app:destination="@id/capturedTimeFragment" />
     </fragment>
     <fragment
         android:id="@+id/dashboardFragment"
@@ -45,5 +48,10 @@
         android:id="@+id/capturedTimeFragment"
         android:name="com.aandtech.navcomponent.CapturedTimeFragment"
         android:label="Captured Time Fragment"
-        tools:layout="@layout/fragment_captured_time" />
+        tools:layout="@layout/fragment_captured_time" >
+        <argument
+            android:name="capturedTime"
+            app:argType="string"
+            android:defaultValue="No Time Availabe" />
+    </fragment>
 </navigation>

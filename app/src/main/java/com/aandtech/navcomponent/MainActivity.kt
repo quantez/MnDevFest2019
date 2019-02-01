@@ -2,6 +2,7 @@ package com.aandtech.navcomponent
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.Navigation.findNavController
@@ -23,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupActionBarWithNavController(this, navController)
     }
 
-    // TODO way to get the up button to work with Nav Component.
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.getItemId()) {
             android.R.id.home -> {
@@ -33,4 +33,12 @@ class MainActivity : AppCompatActivity() {
             else -> return super.onOptionsItemSelected(item)
         }
     }
+
+    fun showBottomNav(show: Boolean) {
+        when (show) {
+            true -> bottomNavigation.visibility = View.VISIBLE
+            false -> bottomNavigation.visibility = View.INVISIBLE
+        }
+    }
+
 }
