@@ -12,4 +12,6 @@
     <string name="notification_fragment">Notification Fragment</string>
     <string name="dashboard">DASHBOARD</string>
     <string name="dashboard_fragment">Dashboard Fragment</string>
+    <string name="time">Time</string>
+    <string name="capture_time">Capture Time</string>
 </resources>
