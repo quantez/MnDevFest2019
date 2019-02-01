@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.aandtech.navcomponent.HomeFragment"
-        android:label="fragment_home"
+        android:label="@string/home_fragment"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_to_dashboardFragment"
@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/dashboardFragment"
         android:name="com.aandtech.navcomponent.DashboardFragment"
-        android:label="fragment_dashboard"
+        android:label="@string/dashboard_fragment"
         tools:layout="@layout/fragment_dashboard">
         <action
             android:id="@+id/action_to_homeFragment"
@@ -32,7 +32,7 @@
     <fragment
         android:id="@+id/notificationFragment"
         android:name="com.aandtech.navcomponent.NotificationFragment"
-        android:label="fragment_notification"
+        android:label="@string/notification_fragment"
         tools:layout="@layout/fragment_notification">
         <action
             android:id="@+id/action_to_homeFragment"
