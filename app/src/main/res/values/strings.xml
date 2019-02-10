@@ -13,5 +13,7 @@
     <string name="dashboard">DASHBOARD</string>
     <string name="dashboard_fragment">Dashboard Fragment</string>
     <string name="time">Time</string>
+    <string name="currentTime">Current Time</string>
+    <string name="currentTimeValue">Today, now</string>
     <string name="capture_time">Capture Time</string>
 </resources>

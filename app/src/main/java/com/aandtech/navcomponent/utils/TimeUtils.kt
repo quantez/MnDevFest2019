@@ -10,7 +10,7 @@ class TimeUtils {
     companion object {
         @RequiresApi(api = Build.VERSION_CODES.O)  // O as in Oreo
         fun formattedDateTime() : String {
-            val formatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy      K:mm a")
+            val formatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy      K:mm:ss a")
             return LocalDateTime.now().format(formatter)
         }
     }

@@ -8,8 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.NavHostFragment
-import com.aandtech.navcomponent.utils.TimeUtils.Companion.formattedDateTime
+import com.aandtech.navcomponent.ViewModel.HomeViewModel
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
@@ -25,7 +27,13 @@ class HomeFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        currentTimeText.text = formattedDateTime()
+        val homeViewModel = ViewModelProviders
+            .of(this)
+            .get(HomeViewModel::class.java)
+
+        homeViewModel.timeDate.observe(this, Observer { timeDate ->
+            currentTimeText.text = timeDate
+        })
 
         timeButton.setOnClickListener {
             val capturedTime = currentTimeText.text.toString()
